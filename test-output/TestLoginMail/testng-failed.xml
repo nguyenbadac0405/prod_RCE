@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestLoginMail]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestLoginMail7(failed)">
+    <classes>
+      <class name="com.scripts.MailTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="EmailLoginTest"/>
+        </methods>
+      </class> <!-- com.scripts.MailTest -->
+    </classes>
+  </test> <!-- TestLoginMail7(failed) -->
+  <test thread-count="5" name="TestLoginMail_488(failed)">
+    <classes>
+      <class name="com.scripts.MailTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="EmailLoginTest"/>
+        </methods>
+      </class> <!-- com.scripts.MailTest -->
+    </classes>
+  </test> <!-- TestLoginMail_488(failed) -->
+  <test thread-count="5" name="TestLoginMail_497(failed)">
+    <classes>
+      <class name="com.scripts.MailTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="EmailLoginTest"/>
+        </methods>
+      </class> <!-- com.scripts.MailTest -->
+    </classes>
+  </test> <!-- TestLoginMail_497(failed) -->
+</suite> <!-- Failed suite [TestLoginMail] -->

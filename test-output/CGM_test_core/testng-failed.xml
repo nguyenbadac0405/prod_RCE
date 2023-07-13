@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CGM_test_core]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Verify that the new case will be created after inputting valid information on all required fields by pss.(failed)">
+    <classes>
+      <class name="com.scripts.CGM">
+        <methods>
+          <include name="tearDown"/>
+          <include name="CGM_create_case"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.scripts.CGM -->
+    </classes>
+  </test> <!-- Verify that the new case will be created after inputting valid information on all required fields by pss.(failed) -->
+  <test thread-count="5" name="Verify that the case will be changed from new to assign when click submit button after save all required field by pss.(failed)">
+    <classes>
+      <class name="com.scripts.CGM">
+        <methods>
+          <include name="tearDown"/>
+          <include name="CGM_new_to_assign"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.scripts.CGM -->
+    </classes>
+  </test> <!-- Verify that the case will be changed from new to assign when click submit button after save all required field by pss.(failed) -->
+  <test thread-count="5" name="Verify that the case can change from assign to approved when click assign button after save all required field by provider.(failed)">
+    <classes>
+      <class name="com.scripts.CGM">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="CGM_assign_to_approve"/>
+        </methods>
+      </class> <!-- com.scripts.CGM -->
+    </classes>
+  </test> <!-- Verify that the case can change from assign to approved when click assign button after save all required field by provider.(failed) -->
+  <test thread-count="5" name="Verify that the case can change from approved to complete by pss when click approved button by pss.(failed)">
+    <classes>
+      <class name="com.scripts.CGM">
+        <methods>
+          <include name="tearDown"/>
+          <include name="complete"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.scripts.CGM -->
+    </classes>
+  </test> <!-- Verify that the case can change from approved to complete by pss when click approved button by pss.(failed) -->
+</suite> <!-- Failed suite [CGM_test_core] -->

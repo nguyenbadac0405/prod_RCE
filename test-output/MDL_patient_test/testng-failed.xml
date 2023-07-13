@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MDL_patient_test]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Verify that the case can change from approved to complete by pss when click approved button by pss.(failed)">
+    <classes>
+      <class name="com.scripts.MDR_patient">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="complete"/>
+        </methods>
+      </class> <!-- com.scripts.MDR_patient -->
+    </classes>
+  </test> <!-- Verify that the case can change from approved to complete by pss when click approved button by pss.(failed) -->
+</suite> <!-- Failed suite [MDL_patient_test] -->

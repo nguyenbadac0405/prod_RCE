@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="30" total="36" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-01T16:54:30 ICT" name="Genetics_test_core" finished-at="2022-12-01T17:02:32 ICT" duration-ms="482098">
+    <groups>
+    </groups>
+    <test started-at="2022-12-01T16:54:30 ICT" name="Verify that the new case will be created after inputting valid information on all required fields by intake." finished-at="2022-12-01T16:56:18 ICT" duration-ms="108573">
+      <class name="com.scripts.Genetics">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.scripts.Genetics@20ccf40b]" started-at="2022-12-01T16:54:30 ICT" name="setUp" finished-at="2022-12-01T16:54:32 ICT" duration-ms="2192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Genetics_create_case()[pri:0, instance:com.scripts.Genetics@20ccf40b]" started-at="2022-12-01T16:54:32 ICT" name="Genetics_create_case" finished-at="2022-12-01T16:56:16 ICT" duration-ms="104172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Genetics_create_case -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.scripts.Genetics@20ccf40b]" started-at="2022-12-01T16:56:16 ICT" name="tearDown" finished-at="2022-12-01T16:56:18 ICT" duration-ms="2166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.scripts.Genetics -->
+    </test> <!-- Verify that the new case will be created after inputting valid information on all required fields by intake. -->
+    <test started-at="2022-12-01T16:56:18 ICT" name="Verify that the case will be changed from new to assign when click submit button after save all required field by pss." finished-at="2022-12-01T16:57:06 ICT" duration-ms="47649">
+      <class name="com.scripts.Genetics">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.scripts.Genetics@942a29c]" started-at="2022-12-01T16:56:18 ICT" name="setUp" finished-at="2022-12-01T16:56:20 ICT" duration-ms="1052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Genetics_new_to_assign()[pri:0, instance:com.scripts.Genetics@942a29c]" started-at="2022-12-01T16:56:20 ICT" name="Genetics_new_to_assign" finished-at="2022-12-01T16:57:04 ICT" duration-ms="44392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Genetics_new_to_assign -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.scripts.Genetics@942a29c]" started-at="2022-12-01T16:57:04 ICT" name="tearDown" finished-at="2022-12-01T16:57:06 ICT" duration-ms="2199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.scripts.Genetics -->
+    </test> <!-- Verify that the case will be changed from new to assign when click submit button after save all required field by pss. -->
+    <test started-at="2022-12-01T16:57:06 ICT" name="Verify that the case can change from assign to approved when click assign button after save all required field by provider." finished-at="2022-12-01T16:58:48 ICT" duration-ms="102051">
+      <class name="com.scripts.Genetics">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.scripts.Genetics@60bd273d]" started-at="2022-12-01T16:57:06 ICT" name="setUp" finished-at="2022-12-01T16:57:07 ICT" duration-ms="1016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Genetics_assign_to_approve1()[pri:0, instance:com.scripts.Genetics@60bd273d]" started-at="2022-12-01T16:57:07 ICT" name="Genetics_assign_to_approve1" finished-at="2022-12-01T16:58:46 ICT" duration-ms="98840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Genetics_assign_to_approve1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.scripts.Genetics@60bd273d]" started-at="2022-12-01T16:58:46 ICT" name="tearDown" finished-at="2022-12-01T16:58:48 ICT" duration-ms="2191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.scripts.Genetics -->
+    </test> <!-- Verify that the case can change from assign to approved when click assign button after save all required field by provider. -->
+    <test started-at="2022-12-01T16:58:48 ICT" name="Verify that the case can change from approve to assign follow up when click assign button after save all required field by pss." finished-at="2022-12-01T17:00:43 ICT" duration-ms="114955">
+      <class name="com.scripts.Genetics">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.scripts.Genetics@5d534f5d]" started-at="2022-12-01T16:58:48 ICT" name="setUp" finished-at="2022-12-01T16:58:49 ICT" duration-ms="886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Genetics_approve1_to_AFU()[pri:0, instance:com.scripts.Genetics@5d534f5d]" started-at="2022-12-01T16:58:49 ICT" name="Genetics_approve1_to_AFU" finished-at="2022-12-01T17:00:41 ICT" duration-ms="111877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Genetics_approve1_to_AFU -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.scripts.Genetics@5d534f5d]" started-at="2022-12-01T17:00:41 ICT" name="tearDown" finished-at="2022-12-01T17:00:43 ICT" duration-ms="2189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.scripts.Genetics -->
+    </test> <!-- Verify that the case can change from approve to assign follow up when click assign button after save all required field by pss. -->
+    <test started-at="2022-12-01T17:00:43 ICT" name="Verify that the case can change from assign follow up to approved 3 when click approved button after save all required field by provider." finished-at="2022-12-01T17:01:46 ICT" duration-ms="62419">
+      <class name="com.scripts.Genetics">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.scripts.Genetics@6fdbe764]" started-at="2022-12-01T17:00:43 ICT" name="setUp" finished-at="2022-12-01T17:00:44 ICT" duration-ms="1073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Genetics_to_aprrove3()[pri:0, instance:com.scripts.Genetics@6fdbe764]" started-at="2022-12-01T17:00:44 ICT" name="Genetics_to_aprrove3" finished-at="2022-12-01T17:01:43 ICT" duration-ms="59127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Genetics_to_aprrove3 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.scripts.Genetics@6fdbe764]" started-at="2022-12-01T17:01:43 ICT" name="tearDown" finished-at="2022-12-01T17:01:46 ICT" duration-ms="2215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.scripts.Genetics -->
+    </test> <!-- Verify that the case can change from assign follow up to approved 3 when click approved button after save all required field by provider. -->
+    <test started-at="2022-12-01T17:01:46 ICT" name="Verify that the case can change from approved 3 to complete by pss when click approved button by pss." finished-at="2022-12-01T17:02:32 ICT" duration-ms="46405">
+      <class name="com.scripts.Genetics">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.scripts.Genetics@3012646b]" started-at="2022-12-01T17:01:46 ICT" name="setUp" finished-at="2022-12-01T17:01:47 ICT" duration-ms="1053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Genetics_to_complete()[pri:0, instance:com.scripts.Genetics@3012646b]" started-at="2022-12-01T17:01:47 ICT" name="Genetics_to_complete" finished-at="2022-12-01T17:02:30 ICT" duration-ms="43104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Genetics_to_complete -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.scripts.Genetics@3012646b]" started-at="2022-12-01T17:02:30 ICT" name="tearDown" finished-at="2022-12-01T17:02:32 ICT" duration-ms="2241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.scripts.Genetics -->
+    </test> <!-- Verify that the case can change from approved 3 to complete by pss when click approved button by pss. -->
+  </suite> <!-- Genetics_test_core -->
+</testng-results>

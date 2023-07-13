@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="covid_test_core">
+	<!-- TC1: NEW Case-->
+	<test name="Verify that the new case will be created after inputting valid information on all required fields by in take.">
+		<classes>
+			<class name="com.scripts.Covid">
+				<methods>
+					<include name="Covid_create_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- TC2: NEW to assign-->
+	<test name="Verify that the case will be changed from new to assign when click submit button after save all required field by pss.">
+		<classes>
+			<class name="com.scripts.Covid">
+				<methods>
+					<include name="Covid_new_to_assign"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- TC3: assign to approve-->
+	<test name="Verify that the case can change from assign to approved when click assign button after save all required field by provider.">
+		<classes>
+			<class name="com.scripts.Covid">
+				<methods>
+					<include name="Covid_assign_to_approve"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- TC4: Approve to complete-->
+	<test name="Verify that the case can change from approve to complete by pss when click submit button after save all required field by pss.">
+		<classes>
+			<class name="com.scripts.Covid">
+				<methods>
+					<include name="Covid_to_complete"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

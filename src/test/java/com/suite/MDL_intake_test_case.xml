@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MDL_test_core">
+	<test name="Verify that the new case will be created after inputting valid information on all required fields by pss.">
+		<classes>
+			<class name="com.scripts.MDL_intake">
+				<methods>
+					<include name="MDL_create_new_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Verify that the case will be changed from new to assign when click submit button after save all required field by pss.">
+		<classes>
+			<class name="com.scripts.MDL_intake">
+				<methods>
+					<include name="MDL_new_to_assign"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Verify that the case can change from assign to approved when click assign button after save all required field by provider.">
+		<classes>
+			<class name="com.scripts.MDL_intake">
+				<methods>
+					<include name="MDL_assign_to_approve"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	<test name="Verify that the case can change from approved to complete by pss when click approved button by pss.">
+		<classes>
+			<class name="com.scripts.MDL_intake">
+				<methods>
+					<include name="complete"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

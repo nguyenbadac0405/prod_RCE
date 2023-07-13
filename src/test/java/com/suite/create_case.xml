@@ -1,0 +1,53 @@
+<suite name="Genetics_test_core">
+	<!-- TC1: NEW Case-->
+	<test name="1Verify that the new case will be created after inputting valid information on all required fields by intake.">
+		<classes>
+			<class name="com.scripts.Genetics">
+				<methods>
+					<include name="Genetics_create_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="2Verify that the new case will be created after inputting valid information on all required fields by intake.">
+		<classes>
+			<class name="com.scripts.Genetics">
+				<methods>
+					<include name="Genetics_create_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="3Verify that the new case will be created after inputting valid information on all required fields by intake.">
+		<classes>
+			<class name="com.scripts.Genetics">
+				<methods>
+					<include name="Genetics_create_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="4Verify that the new case will be created after inputting valid information on all required fields by intake.">
+		<classes>
+			<class name="com.scripts.Genetics">
+				<methods>
+					<include name="Genetics_create_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="5Verify that the new case will be created after inputting valid information on all required fields by intake.">
+		<classes>
+			<class name="com.scripts.Genetics">
+				<methods>
+					<include name="Genetics_create_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>

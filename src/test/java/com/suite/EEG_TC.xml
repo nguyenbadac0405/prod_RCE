@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MDL_test_core">
+	<!-- TC1: NEW Case-->
+	<test name="Verify that the new case will be created after inputting valid information on all required fields by intake.">
+		<classes>
+			<class name="com.scripts.EEG">
+				<methods>
+					<include name="EEG_create_case"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--TC2: new_to_assign -->
+	<test name="Verify that the case will be changed from new to assign when click submit button after save all required field by pss.">
+		<classes>
+			<class name="com.scripts.EEG">
+				<methods>
+					<include name="EEG_new_to_assign"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--TC3: assign_to_approve1 -->
+	<test name="Verify that the case can change from assign to approved when click assign button after save all required field by provider.">
+		<classes>
+			<class name="com.scripts.EEG">
+				<methods>
+					<include name="EEG_assign_to_approve1"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--TC4: approve1_to_AFU -->
+	<test name="Verify that the case can change from approve to assign follow up when click assign button after save all required field by pss.">
+		<classes>
+			<class name="com.scripts.EEG">
+				<methods>
+					<include name="EEG_approve1_to_assign_follow_up"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--TC5: AFU_to_approve3 -->
+	<test name="Verify that the case can change from assign follow up to approved 3 when click approved button after save all required field by provider.">
+		<classes>
+			<class name="com.scripts.EEG">
+				<methods>
+					<include name="EEG_to_aprrove3"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--TC6: approve3_to_complete -->
+	<test name="Verify that the case can change from approved 3 to complete by pss when click approved button by pss.">
+		<classes>
+			<class name="com.scripts.EEG">
+				<methods>
+					<include name="EEG_to_complete"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>

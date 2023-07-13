@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RCE_test_core]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="MDR_test_core(failed)">
+    <classes>
+      <class name="com.scripts.RCE_Core_intake">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="MDR_core"/>
+        </methods>
+      </class> <!-- com.scripts.RCE_Core_intake -->
+    </classes>
+  </test> <!-- MDR_test_core(failed) -->
+</suite> <!-- Failed suite [RCE_test_core] -->

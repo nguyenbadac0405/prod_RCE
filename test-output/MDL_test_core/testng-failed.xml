@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MDL_test_core]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Verify that the case can change from assign to approved when click assign button after save all required field by provider.(failed)">
+    <classes>
+      <class name="com.scripts.EEG">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="EEG_assign_to_approve1"/>
+        </methods>
+      </class> <!-- com.scripts.EEG -->
+    </classes>
+  </test> <!-- Verify that the case can change from assign to approved when click assign button after save all required field by provider.(failed) -->
+  <test thread-count="5" name="Verify that the case can change from approve to assign follow up when click assign button after save all required field by pss.(failed)">
+    <classes>
+      <class name="com.scripts.EEG">
+        <methods>
+          <include name="tearDown"/>
+          <include name="EEG_approve1_to_assign_follow_up"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.scripts.EEG -->
+    </classes>
+  </test> <!-- Verify that the case can change from approve to assign follow up when click assign button after save all required field by pss.(failed) -->
+  <test thread-count="5" name="Verify that the case can change from assign follow up to approved 3 when click approved button after save all required field by provider.(failed)">
+    <classes>
+      <class name="com.scripts.EEG">
+        <methods>
+          <include name="EEG_to_aprrove3"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.scripts.EEG -->
+    </classes>
+  </test> <!-- Verify that the case can change from assign follow up to approved 3 when click approved button after save all required field by provider.(failed) -->
+  <test thread-count="5" name="Verify that the case can change from approved 3 to complete by pss when click approved button by pss.(failed)">
+    <classes>
+      <class name="com.scripts.EEG">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="EEG_to_complete"/>
+        </methods>
+      </class> <!-- com.scripts.EEG -->
+    </classes>
+  </test> <!-- Verify that the case can change from approved 3 to complete by pss when click approved button by pss.(failed) -->
+</suite> <!-- Failed suite [MDL_test_core] -->
