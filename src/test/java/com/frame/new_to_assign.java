@@ -222,7 +222,8 @@ public class new_to_assign {
 		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
-		driver.findElement(By.xpath(".//button[text()='Yes']")).click();
+//		driver.findElement(By.xpath(".//button[text()='Yes']")).click();
+		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(1);
 		System.out.println("-------------------------------Done Assign-------------------------------------");
 		}
@@ -543,7 +544,7 @@ public class new_to_assign {
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
-		Common.waitSec(1);
+		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		System.out.println("------------------------------Done Assign-----------------------------------");
 		Common.waitSec(5);

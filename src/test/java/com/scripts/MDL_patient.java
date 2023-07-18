@@ -212,7 +212,7 @@ public class MDL_patient extends DriverFactory {
 		Common.waitSec(15);
 		new_case_patient.weightloss();
 		Common.waitSec(30);
-		String id = new_case_patient.MDL_ID().substring(9);
+		String id = new_case_patient.weightloss_ID().substring(9);
 		System.out.println(id);
 
 		excel.setCellData(id, 1, 0);

@@ -282,6 +282,13 @@ public class create_new_case_patient {
 
 	}
 	public String MDL_ID() {
+		WebElement ID = driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div/div/ul/li[2]"));
+
+		String case_ID = ID.getText();
+		return case_ID;
+	}
+
+	public String weightloss_ID() {
 		WebElement ID = driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div/div/ul/li[1]"));
 
 		String case_ID = ID.getText();
@@ -355,15 +362,18 @@ public class create_new_case_patient {
 		driver.findElement(By.name("data[screening_questionnaire_question_3]")).sendKeys("1");
 		driver.findElement(By.name("data[screening_questionnaire_question_4]")).sendKeys("1");
 
-		Common.waitSec(20);
+		Common.waitSec(10);
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("window.scrollBy(506, 732)", "");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		WebElement etm1 = driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/div[2]/div/div/div/div[2]/div/div/div/div/div/div/div[13]/div[1]/div[1]/label/span"));
-		action.moveToElement(etm1).build().perform();
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//		WebElement etm1 = driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/div[2]/div/div/div/div[2]/div/div/div/div/div/div/div[13]/div[1]/div[1]/label/span"));
+//		action.moveToElement(etm1).build().perform();
 //		wait.until(ExpectedConditions.elementToBeClickable(etm1));
 //		driver.findElement((By) etm1).click();
-		etm1.click();
+//		etm1.click();
+		action.sendKeys(Keys.TAB).build().perform();
+		action.sendKeys(Keys.SPACE).build().perform();
+		Common.waitSec(2);
 		Common.waitSec(2);
 		//check box 1
 		action.sendKeys(Keys.TAB).build().perform();
