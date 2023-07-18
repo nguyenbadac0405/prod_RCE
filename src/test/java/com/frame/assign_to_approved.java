@@ -825,47 +825,33 @@ public class assign_to_approved {
 
     public void Beauty_to_approve() {
 
-        // Order detail
-        driver.findElement(By.name("data[screening_questionnaire_refills]")).sendKeys("test");
-
-        driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
-        Common.waitSec(2);
-
         // Medical History
         System.out.println("Check Medical History");
-        driver.findElement(By.xpath(".//span[text()='Medical History']")).click();
+        driver.findElement(By.xpath(".//span[text()='Medications']")).click();
         Common.waitSec(2);
-        driver.findElement(By.xpath(".//*[@name='data[patient_personal_history_progress_note_phmx]']"))
-                .sendKeys("test");
-        Common.waitSec(1);
-//		driver.findElement(By.name("data[patient_personal_history_progress_note_confirm_2_sale]")).click();
-        driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
-        Common.waitSec(3);
+        driver.findElement(By.xpath("//*[@id='patient-dashboard']/div[5]/div[3]/div[3]/div[2]/div[4]/label/input")).click();
+        Common.waitSec(2);
+        driver.findElement(By.xpath(".//button[text()='Save']")).click();
+        Common.waitSec(2);
 
         //Check Questionnaire
-        System.out.println("Check Questionnaire");
-        driver.findElement(By.xpath(".//span[text()='Questionnaire']")).click();
-        Common.waitSec(2);
-        driver.findElement(By.name("data[screening_questionnaire_disease][]")).click();
-        driver.findElement(By.xpath("/html/body/div/div[5]/div[3]/div[3]/div/div/div[1]/div[2]/div[1]/div[1]/label/input")).click();
-        driver.findElement(By.xpath("/html/body/div/div[5]/div[3]/div[3]/div/div/div[1]/div[3]/div[1]/div[1]/label/input")).click();
-        driver.findElement(By.xpath(".//input[@value='Acne']")).click();
-        driver.findElement(By.xpath(".//input[@value='Tretinoin']")).click();
-        driver.findElement(By.name("data[screening_questionnaire_question_4_additional_question]")).sendKeys("test");
-        driver.findElement(By.name("data[screening_questionnaire_question_5_additional_question]")).sendKeys("test");
-        driver.findElement(By.name("data[screening_questionnaire_question_5][]")).click();
-        driver.findElement(By.xpath("/html/body/div/div[5]/div[3]/div[3]/div/div/div[1]/div[12]/div[1]/div[1]/label/input")).click();
-        driver.findElement(By.name("data[screening_questionnaire_question_6_if_yes]")).sendKeys("test");
-        driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
-        Common.waitSec(3);
+//        System.out.println("Check Questionnaire");
+//        driver.findElement(By.xpath(".//span[text()='Questionnaire']")).click();
+//        Common.waitSec(2);
+//        driver.findElement(By.name("data[screening_questionnaire_disease][]")).click();
+//        driver.findElement(By.xpath("/html/body/div/div[5]/div[3]/div[3]/div/div/div[1]/div[2]/div[1]/div[1]/label/input")).click();
+//        driver.findElement(By.xpath("/html/body/div/div[5]/div[3]/div[3]/div/div/div[1]/div[3]/div[1]/div[1]/label/input")).click();
+//        driver.findElement(By.xpath(".//input[@value='Acne']")).click();
+//        driver.findElement(By.xpath(".//input[@value='Tretinoin']")).click();
+//        driver.findElement(By.name("data[screening_questionnaire_question_4_additional_question]")).sendKeys("test");
+//        driver.findElement(By.name("data[screening_questionnaire_question_5_additional_question]")).sendKeys("test");
+//        driver.findElement(By.name("data[screening_questionnaire_question_5][]")).click();
+//        driver.findElement(By.xpath("/html/body/div/div[5]/div[3]/div[3]/div/div/div[1]/div[12]/div[1]/div[1]/label/input")).click();
+//        driver.findElement(By.name("data[screening_questionnaire_question_6_if_yes]")).sendKeys("test");
+//        driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
+//        Common.waitSec(3);
 
-        // medications
-        driver.findElement(By.xpath(".//span[text()='Medications']")).click();
-        System.out.println("Check Medications");
-        driver.findElement(By.xpath("//*[@id='patient-dashboard']/div[5]/div[3]/div[3]/div[2]/div[4]/label/input"))
-                .click();
-        driver.findElement(By.xpath(".//button[text()='Save']")).click();
-        Common.waitSec(3);
+
 
         // review of systems
         System.out.println("Review of Systems");

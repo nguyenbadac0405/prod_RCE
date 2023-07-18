@@ -212,8 +212,8 @@ public class create_new_case_intake {
 		Common.waitSec(2);
 
 		// set service type
-		driver.findElement(By.xpath("//*[@id='react-select-11-input']")).sendKeys("single", Keys.ENTER);
-		Common.waitSec(3);
+//		driver.findElement(By.xpath("//*[@id='react-select-11-input']")).sendKeys("single", Keys.ENTER);
+//		Common.waitSec(3);
 
 		// set state
 //		driver.findElement(By.xpath("//*[@id='react-select-12-input']")).sendKeys("mdl", Keys.ENTER);
@@ -593,15 +593,15 @@ public class create_new_case_intake {
 		Common.waitSec(2);
 
 		// set MG
-		driver.findElement(By.xpath("//*[@id='react-select-7-input']")).sendKeys(MG, Keys.ENTER);
+		driver.findElement(By.xpath("//*[@id='react-select-8-input']")).sendKeys(MG, Keys.ENTER);
 		Common.waitSec(2);
 
 		// set service type
-		driver.findElement(By.xpath("//*[@id='react-select-9-input']")).sendKeys(type, Keys.ENTER);
+		driver.findElement(By.xpath("//*[@id='react-select-10-input']")).sendKeys(type, Keys.ENTER);
 		Common.waitSec(3);
 
 		// set state
-		driver.findElement(By.xpath("//*[@id='react-select-10-input']")).sendKeys(lab, Keys.ENTER);
+		driver.findElement(By.xpath("//*[@id='react-select-11-input']")).sendKeys(lab, Keys.ENTER);
 		System.out.println("Done Business and Vertical");
 		Common.waitSec(2);
 
@@ -1712,7 +1712,7 @@ public class create_new_case_intake {
 		
 		//email
 		driver.findElement(By.name("data[patient_email]")).sendKeys("nhuttest82@yopmail.com");
-					
+		Common.waitSec(3);
 		// submit
 		driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
 		System.out.println("-----------------Done draft case------------------");
@@ -1725,21 +1725,14 @@ public class create_new_case_intake {
 		driver.findElement(By.xpath("//*[@id=\"patient-dashboard\"]/div[5]/div[2]/div[2]/div/button")).click();
 		Common.waitSec(3);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		try {
-			if (driver.findElement(By.xpath("//*[@id=\"templateBody\"]/table/tbody/tr/td/table/tbody/tr[11]/td/table/tbody/tr/td/div")).isDisplayed())
-				System.out.println("true");
-		}
-		catch (NoSuchElementException ex) {
-			System.out.println("false");
-		}
-		WebElement link_booking = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"templateBody\"]/table/tbody/tr/td/table/tbody/tr[11]/td/table/tbody/tr/td/div/a")));
-		link_booking.getAttribute("href");
 		driver.findElement(By.xpath(".//button[text()='Send Smart Email ']")).click();
 		Common.waitSec(10);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String link = link_booking.getAttribute("href");
-		System.out.println(link);
 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement open_booking = (WebElement) js.executeScript("return document.querySelector('body .modal-content .modal-body .cl-smart-col-content .cl-wrapper-email div').shadowRoot.querySelector('a.cl-button')");
+		String link = open_booking.getAttribute("href");
+		System.out.println(link);
+		Common.waitSec(3);
 		js.executeScript("window.location='https://yopmail.com/';");
 		Common.waitSec(5);
 		driver.findElement(By.id("login")).sendKeys("nhuttest82");
@@ -1749,14 +1742,17 @@ public class create_new_case_intake {
 		Common.waitSec(10);
 
 
-		js.executeScript("window.location='open_booking_button.getAttribute(\"href\")';");
+
+		js.executeScript("window.location='"+link+"';");
 		Common.waitSec(10);
 
 		driver.findElement(By.xpath("/html/body/div[2]/div[6]/div[1]/div[2]/div[2]/div/div[2]/div/div/div[1]/div[6]/div[1]/div/input[2]")).sendKeys("07/01/2005");
 		Common.waitSec(2);
+		action.sendKeys(Keys.TAB).build().perform();
+		Common.waitSec(3);
 
 		driver.findElement(By.name("data[submit]")).click();
-		Common.waitSec(7);
+		Common.waitSec(15);
 
 		driver.findElement(By.xpath(".//span[text()='Yes']")).click();
 
@@ -1784,7 +1780,7 @@ public class create_new_case_intake {
 		Common.waitSec(5);
 		driver.findElement(By.xpath(".//button[text()='Confirm time']")).click();
 		Common.waitSec(3);
-		driver.findElement(By.xpath(".//button[text()='Confirm time']")).click();
+		driver.findElement(By.xpath(".//button[text()='Skip']")).click();
 		Common.waitSec(3);
 
 	}

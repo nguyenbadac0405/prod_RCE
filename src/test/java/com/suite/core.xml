@@ -3,7 +3,7 @@
 
 <suite name="test_core">
 	<!-- TC1: genetics complete-->
-	<test name="Verify that the new case will be created after inputting valid information on all required fields by intake.">
+	<test name="genetics complete">
 		<classes>
 			<class name="com.scripts.Genetics">
 				<methods>
@@ -13,29 +13,41 @@
 		</classes>
 	</test>
 
-	<!--TC2: CGM -->
-	<test name="CGM">
+	<!-- TC2: MG, PSS dashboard-->
+	<test name="MG PSS Dashboard">
 		<classes>
-			<class name="com.scripts.CGM">
+			<class name="com.scripts.Genetics">
 				<methods>
-					<include name="CGM"></include>
+					<include name="MG_PSS_dashboard"></include>
 				</methods>
 			</class>
 		</classes>
 	</test>
 
-	<!--TC3: beauty -->
-<!--	<test name="Verify that the case can change from assign to approved when click assign button after save all required field by provider.">-->
-<!--		<classes>-->
-<!--			<class name="com.scripts.beauty">-->
-<!--				<methods>-->
-<!--					<include name="beauty"></include>-->
-<!--				</methods>-->
-<!--			</class>-->
-<!--		</classes>-->
-<!--	</test>-->
+	<!-- TC3: genetics cancel-->
+	<test name="genetics cancel">
+		<classes>
+			<class name="com.scripts.Genetics">
+				<methods>
+					<include name="cancel"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
 
-	<!--TC4: MDL intake -->
+	<!-- TC4: genetics denied-->
+	<test name="genetics denied">
+		<classes>
+			<class name="com.scripts.Genetics">
+				<methods>
+					<include name="denied"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<!--TC5: MDL intake -->
 	<test name="MDL intake">
 		<classes>
 			<class name="com.scripts.MDL_intake">
@@ -48,7 +60,7 @@
 
 
 
-	<!--TC4: MDL intake -->
+	<!--TC6: MDL patient -->
 	<test name="MDL patient">
 		<classes>
 			<class name="com.scripts.MDL_patient">
@@ -58,6 +70,30 @@
 			</class>
 		</classes>
 	</test>
+
+	<!--TC7: weight loss -->
+	<test name="weightloss">
+		<classes>
+			<class name="com.scripts.MDL_patient">
+				<methods>
+					<include name="weightloss"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!--TC8: beauty -->
+	<test name="beauty">
+		<classes>
+			<class name="com.scripts.beauty">
+				<methods>
+					<include name="beauty"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
 
 
 

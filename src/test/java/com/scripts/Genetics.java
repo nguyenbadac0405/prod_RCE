@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 import com.Common;
 
+import java.awt.image.ColorModel;
+
 public class Genetics extends DriverFactory {
 	login login;
 	GetDriver link;
@@ -474,6 +476,31 @@ public class Genetics extends DriverFactory {
 
 		search.search_from_intake(id);
 		Common.waitSec(5);
+	}
+	@Test
+	public void MG_PSS_dashboard() throws Exception {
+		//login intake
+		login.URL_intake();
+		Common.waitSec(5);
+		login.intake("123456");
+		Common.waitSec(5);
+
+		login.MG_dashboard();
+
+		Common.waitSec(10);
+
+		login.change_link_to_pss();
+		Common.waitSec(10);
+
+		logout.logout();
+		Common.waitSec(5);
+
+		login.pss("111111");
+		Common.waitSec(10);
+
+		login.PSS_dashboard();
+		Common.waitSec(10);
+
 	}
 
 }

@@ -73,7 +73,7 @@ public class beauty extends DriverFactory {
 		search.search_from_intake(id);
 		Common.waitSec(10);
 		new_case_intake.beauty_booking();
-		System.out.println("done");
+		System.out.println("--------------------------Done New Case-------------------------");
 	}
 	
 	@Test
@@ -154,11 +154,18 @@ public class beauty extends DriverFactory {
 		System.out.println("Case-ID: "+id);
 
 		logout.logout();
-		Common.waitSec(5);
+
+		login.pss("111111");
+		Common.waitSec(10);
+		search.search_from_intake(id);
+		Common.waitSec(10);
+		new_case_intake.beauty_booking();
+		System.out.println("--------------------------Done New Case-------------------------");
+
+		login.change_link_to_pss();
 
 		// assign
-		login.URL_intake();
-		login.pss("111111");
+
 		Common.waitSec(5);
 		search.search_from_intake(id);
 		Common.waitSec(5);

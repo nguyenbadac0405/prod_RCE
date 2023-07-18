@@ -421,22 +421,37 @@ public class new_to_assign {
 	
 	public void Beauty_to_assign() {
 		//compliance
+		driver.findElement(By.name("data[compliance_verification_verified_patient_name]")).click();
+		Common.waitSec(1);
+		driver.findElement(By.name("data[compliance_verification_verified_patient_dob]")).click();
+		Common.waitSec(1);
+		driver.findElement(By.name("data[compliance_verification_verified_patient_gender]")).click();
+		Common.waitSec(1);
+		driver.findElement(By.name("data[compliance_verification_verified_patient_state]")).click();
+		Common.waitSec(1);
+		driver.findElement(By.xpath(".//input[@value='Me']")).click();
+		Common.waitSec(1);
+
+		driver.findElement(By.name("data[submit]")).click();
+		Common.waitSec(5);
 		Actions action = new Actions(driver);
-		driver.findElement(By.xpath(".//div[text()='Mark as Pending']")).click();
-		Common.waitSec(2);
-		action.sendKeys(Keys.ENTER).build().perform();
+		driver.findElement(By.name("data[order_info_textfield]")).sendKeys("123");
+		Common.waitSec(1);
+
+		driver.findElement(By.name("data[submit]")).click();
 		Common.waitSec(3);
 		//selected provider
 		System.out.println("Select Provider");
-		driver.findElement(By.xpath("/html/body/div/div[5]/div[2]/div[4]/div/div/div/div[10]/div/div/div/div[1]")).click();
-		Common.waitSec(3);
+		driver.findElement(By.xpath(".//div[text()='No Provider Available']")).click();
+		Common.waitSec(2);
 		action.sendKeys("dac").build().perform();
+		Common.waitSec(3);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
-		Common.waitSec(2);
+		Common.waitSec(5);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
-		Common.waitSec(2);
+		Common.waitSec(1);
 		action.sendKeys(Keys.ENTER).build().perform();
 		System.out.println("------------------------------Done Assign-----------------------------------");
 		Common.waitSec(5);

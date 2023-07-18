@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="TrainingTestNG" />
         <module name="automation" />
         <module name="prod" />
+        <module name="prod_RCE" />
+        <module name="TrainingTestNG" />
       </profile>
     </annotationProcessing>
   </component>

@@ -196,12 +196,22 @@ public class MDL_patient extends DriverFactory {
 	void weightloss() throws Exception {
 		excel.setExcelFile("src/test/resources/MDL.xlsx", "Sheet1");
 
-		login.URL_MDL();
+		login.URL_ADMIN();
+		Common.waitSec(3);
+		login.admin();
+		Common.waitSec(3);
+
+		login.change_price();
+		Common.waitSec(3);
+
+		login.change_link_to_MDL();
+		Common.waitSec(10);
+
 		Common.waitSec(3);
 		login.MDL_patient();
 		Common.waitSec(15);
 		new_case_patient.weightloss();
-		Common.waitSec(10);
+		Common.waitSec(30);
 		String id = new_case_patient.MDL_ID().substring(9);
 		System.out.println(id);
 
@@ -240,6 +250,12 @@ public class MDL_patient extends DriverFactory {
 		Common.waitSec(5);
 
 		to_complete.complete_case();
+		Common.waitSec(3);
+
+		login.change_link_to_admin();
+		Common.waitSec(5);
+		login.back_price();
+		Common.waitSec(5);
 	}
 	@Test
 	public void weightloss_new_case() throws Exception {
@@ -287,5 +303,15 @@ public class MDL_patient extends DriverFactory {
 
 		to_approved.weightloss_to_approve();
 		Common.waitSec(3);
+	}
+
+	@Test
+	public void changeprice() throws Exception {
+		login.URL_MDL();
+		login.MDL_patient();
+		Common.waitSec(30);
+		String id = new_case_patient.MDL_ID();
+		System.out.println(id);
+
 	}
 }

@@ -260,9 +260,9 @@ public class create_new_case_patient {
 		coupon.sendKeys(Keys.SPACE);
 		Common.waitSec(1);
 		coupon.sendKeys(Keys.BACK_SPACE);
-		Common.waitSec(15);
+		Common.waitSec(10);
 		driver.findElement(By.xpath(".//span[text()='Pay']")).click();
-		Common.waitSec(3);
+		Common.waitSec(20);
 
 		System.out.println("Select booking time");
 		driver.findElement(By.xpath(".//input[@placeholder='Date, Month, Year']")).click();
@@ -282,7 +282,7 @@ public class create_new_case_patient {
 
 	}
 	public String MDL_ID() {
-		WebElement ID = driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div/div/ul/li[2]"));
+		WebElement ID = driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div/div/ul/li[1]"));
 
 		String case_ID = ID.getText();
 		return case_ID;
