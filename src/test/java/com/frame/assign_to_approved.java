@@ -126,7 +126,7 @@ public class assign_to_approved {
         driver.findElement(By.xpath("//span[text()='Done']")).click();
         Common.waitSec(2);
         driver.findElement(By.xpath(".//button[text()='Save']")).click();
-        Common.waitSec(3);
+        Common.waitSec(7);
 
         // review of systems
         System.out.println("Provider Review of Systems");

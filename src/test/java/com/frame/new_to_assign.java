@@ -543,6 +543,10 @@ public class new_to_assign {
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
+		driver.findElement(By.xpath(".//span[text()='Patient Information']")).click();
+		Common.waitSec(3);
+		driver.findElement(By.xpath(".//span[text()='Billing Information']")).click();
+		Common.waitSec(3);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();

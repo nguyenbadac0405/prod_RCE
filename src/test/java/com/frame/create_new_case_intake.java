@@ -650,6 +650,7 @@ public class create_new_case_intake {
 		driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
 		System.out.println("-----------------Done draft case------------------");
 		System.out.println(lab);
+		Common.waitSec(5);
 		//draft to new
 		
 		//TEST TYPE CGX
