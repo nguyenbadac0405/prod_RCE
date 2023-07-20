@@ -7,6 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import com.Common;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class new_to_assign {
 	protected static WebDriver driver;
@@ -74,6 +78,9 @@ public class new_to_assign {
 //		driver.findElement(By.xpath(".//button[text()='OK']")).click();
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 //		driver.findElement(By.xpath(".//button[text()='Yes']")).click();
@@ -158,6 +165,9 @@ public class new_to_assign {
 		action.sendKeys(Keys.ENTER).build().perform();
 		driver.findElement(By.xpath(".//button[text()='OK']")).click();
 		Common.waitSec(2);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 		driver.findElement(By.xpath(".//button[text()='Yes']")).click();
@@ -222,6 +232,9 @@ public class new_to_assign {
 		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 //		driver.findElement(By.xpath(".//button[text()='Yes']")).click();
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(1);
@@ -266,6 +279,9 @@ public class new_to_assign {
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 		driver.findElement(By.xpath(".//button[text()='Yes']")).click();
@@ -376,8 +392,11 @@ public class new_to_assign {
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
-		Common.waitSec(1);
+		Common.waitSec(3);
 		action.sendKeys(Keys.ENTER).build().perform();
 		System.out.println("------------------------------Done Assign-----------------------------------");
 		Common.waitSec(5);
@@ -413,6 +432,9 @@ public class new_to_assign {
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 		action.sendKeys(Keys.ENTER).build().perform();
@@ -451,6 +473,9 @@ public class new_to_assign {
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 		action.sendKeys(Keys.ENTER).build().perform();
@@ -486,6 +511,9 @@ public class new_to_assign {
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 		action.sendKeys(Keys.ENTER).build().perform();
@@ -523,6 +551,9 @@ public class new_to_assign {
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 		action.sendKeys(Keys.ENTER).build().perform();
@@ -547,6 +578,9 @@ public class new_to_assign {
 		Common.waitSec(3);
 		driver.findElement(By.xpath(".//span[text()='Billing Information']")).click();
 		Common.waitSec(3);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(".//div[text()='Assign']"))));
+		Common.waitSec(2);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(2);
 		action.sendKeys(Keys.ENTER).build().perform();

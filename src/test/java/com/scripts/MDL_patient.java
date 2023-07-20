@@ -1,6 +1,7 @@
 package com.scripts;
 
 import com.frame.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -248,6 +249,11 @@ public class MDL_patient extends DriverFactory {
 
 		search.search_from_intake(id);
 		Common.waitSec(5);
+
+		driver.findElement(By.xpath(".//span[text()='Patient Information']")).click();
+		Common.waitSec(3);
+		driver.findElement(By.xpath(".//span[text()='Billing Information']")).click();
+		Common.waitSec(3);
 
 		to_complete.complete_case();
 		Common.waitSec(3);
