@@ -256,7 +256,7 @@ public class create_new_case_patient {
 		driver.findElement(By.xpath(".//button[text()='Submit']")).click();
 		Common.waitSec(2);
 		WebElement coupon = driver.findElement(By.xpath("//*[@id=\"dcrootID\"]/div[4]/div[1]/div[2]/div[2]/div/div/div[1]/div[2]/div/div[2]/div[2]/div[4]/div[2]/input"));
-		coupon.sendKeys("RH2BYI");
+		coupon.sendKeys("TFL9X1");
 		coupon.sendKeys(Keys.SPACE);
 		Common.waitSec(1);
 		coupon.sendKeys(Keys.BACK_SPACE);
