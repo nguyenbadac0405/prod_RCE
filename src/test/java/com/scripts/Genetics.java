@@ -298,6 +298,9 @@ public class Genetics extends DriverFactory {
 		to_approved.Genetics_to_approve1(lab, type);
 		Common.waitSec(3);
 
+		to_approved.patient_rate();
+		Common.waitSec(3);
+
 		//approve 1 to AFU
 		logout.logout();
 		Common.waitSec(5);
@@ -341,6 +344,9 @@ public class Genetics extends DriverFactory {
 		Common.waitSec(5);
 
 		to_approved.to_approve3();
+		Common.waitSec(3);
+
+		to_approved.patient_rate();
 		Common.waitSec(3);
 
 		// approved 3 to complete
@@ -461,6 +467,10 @@ public class Genetics extends DriverFactory {
 
 		to_approved.genetic_denied(lab, type);
 		Common.waitSec(3);
+
+		to_approved.patient_rate();
+		Common.waitSec(3);
+
 
 		logout.logout();
 

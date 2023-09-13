@@ -276,8 +276,6 @@ public class create_new_case_patient {
 		Common.waitSec(5);
 		driver.findElement(By.xpath(".//button[text()='Save']")).click();
 		Common.waitSec(10);
-		driver.findElement(By.xpath(".//button[text()='Save']")).click();
-		Common.waitSec(10);
 		System.out.println("--------------------------Done new case-----------------------------------");
 
 	}
@@ -363,8 +361,9 @@ public class create_new_case_patient {
 		driver.findElement(By.name("data[screening_questionnaire_question_4]")).sendKeys("1");
 
 		Common.waitSec(10);
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("window.scrollBy(506, 732)", "");
+		//document.querySelector('body .bw-booking-modal .bw-booking-modal-inner .bw-tab-pane .formio-form .wizard-page .form-check span');
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 //		WebElement etm1 = driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/div[2]/div/div/div/div[2]/div/div/div/div/div/div/div[13]/div[1]/div[1]/label/span"));
 //		action.moveToElement(etm1).build().perform();

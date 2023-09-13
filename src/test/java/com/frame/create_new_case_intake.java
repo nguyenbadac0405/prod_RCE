@@ -1594,7 +1594,7 @@ public class create_new_case_intake {
 		
 		//gender & ethnicity
 		driver.findElement(By.xpath("//*[@value='Male']")).click();
-		Common.waitSec(1);
+		Common.waitSec(5);
 		driver.findElement(By.xpath("//*[@value='Asian']")).click();
 		Common.waitSec(1);
 		

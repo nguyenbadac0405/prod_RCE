@@ -32,7 +32,7 @@ public class DriverFactory {
 	@BeforeMethod
 	public void setUp() throws Exception {
 
-		System.setProperty("webdriver.chrome.driver","E:\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win32\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver();

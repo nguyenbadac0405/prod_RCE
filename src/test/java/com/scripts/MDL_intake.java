@@ -154,13 +154,17 @@ public class MDL_intake extends DriverFactory {
 		login.provider("123456");
 		Common.waitSec(15);
 		search.search_from_intake(id);
-		Common.waitSec(5);
+		Common.waitSec(10);
 
 		billing.billing();
 		Common.waitSec(3);
 
 		to_approved.assign_to_approved_MDL();
 		Common.waitSec(10);
+
+		to_approved.patient_rate();
+		Common.waitSec(3);
+
 
 		logout.logout(); //done approved
 

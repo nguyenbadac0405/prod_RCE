@@ -1,9 +1,6 @@
 package com.frame;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
 import com.Common;
@@ -1099,8 +1096,8 @@ public class assign_to_approved {
 
                 // Medical History
                 System.out.println("Check Medical History");
-                driver.findElement(By.xpath(".//span[text()='Medical History']")).click();
-                Common.waitSec(2);
+                driver.findElement(By.xpath(".//*[@class='sections-wrapper']/div[5]/div/div/div/strong/span")).click();
+                Common.waitSec(5);
                 driver.findElement(By.xpath(".//input[@value='Yes']")).click();
                 Common.waitSec(2);
                 driver.findElement(By.name("data[medical_history_patient_question2]")).sendKeys("test");
@@ -1495,6 +1492,19 @@ public class assign_to_approved {
         driver.findElement(By.xpath(".//button[text()='Done']")).click();
         Common.waitSec(3);
         actions.sendKeys(Keys.ENTER).build().perform();
+
+    }
+
+    public void patient_rate() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement rate = (WebElement) js.executeScript("return document.querySelector('body .modal-body .star-ratings .star-container .widget-svg path ');");
+        String string_rate = (String) js.executeScript("return document.querySelector('body .modal-body .star-ratings .star-container .widget-svg path ');");
+        if (string_rate != null){
+            rate.click();
+            Common.waitSec(2);
+            driver.findElement(By.className("tms-rating-modal-footer-btn")).click();
+            Common.waitSec(3);
+        }
 
     }
 

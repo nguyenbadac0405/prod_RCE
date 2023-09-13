@@ -26,7 +26,7 @@ public class billing {
         driver.findElement(By.xpath(".//*[@class='modal-content']/div[2]/div/div[3]/div/input")).sendKeys("1");
         Common.waitSec(1);
         driver.findElement(By.xpath(".//button[text()='Save']")).click();
-        Common.waitSec(2);
+        Common.waitSec(5);
         driver.findElement(By.xpath(".//button[text()='OK']")).click();
         Common.waitSec(5);
 

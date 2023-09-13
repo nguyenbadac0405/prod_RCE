@@ -229,7 +229,7 @@ public class new_to_assign {
 		Common.waitSec(3);
 		action.sendKeys(Keys.ENTER).build().perform();
 		driver.findElement(By.xpath(".//button[text()='OK']")).click();
-		Common.waitSec(2);
+		Common.waitSec(10);
 		driver.findElement(By.xpath(".//div[text()='Assign']")).click();
 		Common.waitSec(1);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));

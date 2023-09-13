@@ -182,6 +182,9 @@ public class MDL_patient extends DriverFactory {
 		to_approved.assign_to_approved_MDL();
 		Common.waitSec(10);
 
+		to_approved.patient_rate();
+		Common.waitSec(3);
+
 		logout.logout(); //done approved
 
 		login.pss("111111");
@@ -212,7 +215,7 @@ public class MDL_patient extends DriverFactory {
 		login.MDL_patient();
 		Common.waitSec(15);
 		new_case_patient.weightloss();
-		Common.waitSec(30);
+		Common.waitSec(60);
 		String id = new_case_patient.weightloss_ID().substring(9);
 		System.out.println(id);
 
@@ -241,6 +244,9 @@ public class MDL_patient extends DriverFactory {
 
 		to_approved.weightloss_to_approve();
 		Common.waitSec(10);
+
+		to_approved.patient_rate();
+		Common.waitSec(3);
 
 		logout.logout(); //done approved
 
