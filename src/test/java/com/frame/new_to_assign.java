@@ -452,6 +452,8 @@ public class new_to_assign {
 		Common.waitSec(1);
 		driver.findElement(By.name("data[compliance_verification_verified_patient_state]")).click();
 		Common.waitSec(1);
+		driver.findElement(By.xpath(".//input[@value='Asynchronous']")).click();
+		Common.waitSec(1);
 		driver.findElement(By.xpath(".//input[@value='Me']")).click();
 		Common.waitSec(1);
 

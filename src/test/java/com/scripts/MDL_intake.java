@@ -162,7 +162,7 @@ public class MDL_intake extends DriverFactory {
 		to_approved.assign_to_approved_MDL();
 		Common.waitSec(10);
 
-		to_approved.patient_rate();
+//		to_approved.patient_rate();
 		Common.waitSec(3);
 
 

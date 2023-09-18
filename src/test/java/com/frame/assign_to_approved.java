@@ -861,6 +861,8 @@ public class assign_to_approved {
         driver.findElement(By.xpath("//*[@name='data[assessment_plan_plan]']"))
                 .sendKeys("There is all plan that the provider is setting for you.");
         Common.waitSec(2);
+        driver.findElement(By.xpath(".//input[@value='Asynchronous']")).click();
+        Common.waitSec(3);
         driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
         Common.waitSec(3);
 
@@ -983,6 +985,8 @@ public class assign_to_approved {
         System.out.println("Set Assessment & Plan");
         driver.findElement(By.xpath("//*[@name='data[assessment_plan_hpi]']")).sendKeys("There is all HPI that the provider is setting for you.");
         driver.findElement(By.xpath("//*[@name='data[assessment_plan_plan]']")).sendKeys("There is all plan that the provider is setting for you.");
+        Common.waitSec(2);
+        driver.findElement(By.xpath(".//input[@value='Asynchronous']")).click();
         Common.waitSec(5);
         driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
         Common.waitSec(3);
@@ -1016,6 +1020,8 @@ public class assign_to_approved {
         Common.waitSec(3);
         driver.findElement(By.name("data[assessment_plan_plan]")).sendKeys("There is all plan that the provider is setting for you.");
         Common.waitSec(1);
+        driver.findElement(By.xpath(".//input[@value='Asynchronous']")).click();
+        Common.waitSec(2);
         driver.findElement(By.name("data[submit]")).click();
         Common.waitSec(3);
 
@@ -1497,8 +1503,8 @@ public class assign_to_approved {
 
     public void patient_rate() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement rate = (WebElement) js.executeScript("return document.querySelector('body .modal-body .star-ratings .star-container .widget-svg path ');");
-        String string_rate = (String) js.executeScript("return document.querySelector('body .modal-body .star-ratings .star-container .widget-svg path ');");
+        WebElement rate = (WebElement) js.executeScript("return document.querySelector('body .modal-body .star-ratings .star-container .widget-svg path');");
+        String string_rate = (String) js.executeScript("return document.querySelector('body .modal-body .star-ratings .star-container .widget-svg path');");
         if (string_rate != null){
             rate.click();
             Common.waitSec(2);

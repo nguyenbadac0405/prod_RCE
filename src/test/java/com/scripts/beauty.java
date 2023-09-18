@@ -190,7 +190,7 @@ public class beauty extends DriverFactory {
 		to_approved.Beauty_to_approve();
 		Common.waitSec(3);
 
-		to_approved.patient_rate();
+//		to_approved.patient_rate();
 		Common.waitSec(3);
 
 		logout.logout();

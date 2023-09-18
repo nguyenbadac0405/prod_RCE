@@ -182,7 +182,7 @@ public class MDL_patient extends DriverFactory {
 		to_approved.assign_to_approved_MDL();
 		Common.waitSec(10);
 
-		to_approved.patient_rate();
+//		to_approved.patient_rate();
 		Common.waitSec(3);
 
 		logout.logout(); //done approved
@@ -245,7 +245,7 @@ public class MDL_patient extends DriverFactory {
 		to_approved.weightloss_to_approve();
 		Common.waitSec(10);
 
-		to_approved.patient_rate();
+//		to_approved.patient_rate();
 		Common.waitSec(3);
 
 		logout.logout(); //done approved
