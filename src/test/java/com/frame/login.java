@@ -109,10 +109,9 @@ public class login {
 	}
 
 	public void change_price() {
-		driver.findElement(By.xpath("//*[@id=\"accordionSidenav\"]/a[15]")).click();
-		Common.waitSec(5);
-		driver.findElement(By.xpath(".//a[@href='/admin/ecommerce/product/afbd97fa-ac92-4b79-b427-2109292288b5/change/']")).click();
-		Common.waitSec(5);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.location='https://rcelive.gkim.digital/admin/ecommerce/product/afbd97fa-ac92-4b79-b427-2109292288b5/change/?_changelist_filters=all%3D';");
+		Common.waitSec(3);
 		driver.findElement(By.id("id_unit_price")).click();
 		Common.waitSec(2);
 		driver.findElement(By.id("id_unit_price")).clear();
@@ -121,7 +120,6 @@ public class login {
 		driver.findElement(By.name("_save")).click();
 		Common.waitSec(5);
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.location='https://rcelive.gkim.digital/admin/ecommerce/product/e6f8ce1a-525e-4b1c-ae9c-a5245e6cdb15/change/?_changelist_filters=p%3D1';");
 
 		Common.waitSec(15);
@@ -138,10 +136,9 @@ public class login {
 	}
 
 	public void back_price() {
-		driver.findElement(By.xpath("//*[@id=\"accordionSidenav\"]/a[15]")).click();
-		Common.waitSec(5);
-		driver.findElement(By.xpath(".//a[@href='/admin/ecommerce/product/afbd97fa-ac92-4b79-b427-2109292288b5/change/']")).click();
-		Common.waitSec(5);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.location='https://rcelive.gkim.digital/admin/ecommerce/product/afbd97fa-ac92-4b79-b427-2109292288b5/change/?_changelist_filters=all%3D';");
+		Common.waitSec(3);
 		driver.findElement(By.id("id_unit_price")).click();
 		Common.waitSec(2);
 		driver.findElement(By.id("id_unit_price")).clear();
@@ -150,7 +147,6 @@ public class login {
 		driver.findElement(By.name("_save")).click();
 		Common.waitSec(5);
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.location='https://rcelive.gkim.digital/admin/ecommerce/product/e6f8ce1a-525e-4b1c-ae9c-a5245e6cdb15/change/?_changelist_filters=p%3D1';");
 
 		Common.waitSec(15);
@@ -183,10 +179,10 @@ public class login {
 
 		driver.findElement(By.xpath(".//button[text()='Download All']")).click();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(240));
 
 
-		Common.waitSec(120);
+		Common.waitSec(240);
 		WebElement go_back = driver.findElement(By.xpath(".//button[text()='Go back']"));
 
 		wait.until(ExpectedConditions.elementToBeClickable(go_back));

@@ -270,7 +270,7 @@ public class create_new_case_patient {
 		action.sendKeys(Keys.ENTER).build().perform();
 		driver.findElement(By.xpath(".//input[@placeholder='00:00']")).click();
 		Common.waitSec(2);
-		driver.findElement(By.xpath(".//li[text()='8:00 PM']")).click();
+		driver.findElement(By.xpath(".//li[text()='9:00 PM']")).click();
 		Common.waitSec(2);
 		driver.findElement(By.xpath(".//button[text()='Confirm']")).click();
 		Common.waitSec(5);
@@ -339,137 +339,51 @@ public class create_new_case_patient {
 
 	public void weightloss() {
 		Actions action = new Actions(driver);
-		driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div[1]/div[4]/button[2]")).click();
-		Common.waitSec(1);
-		driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div[1]/div[4]/div/div/div[5]/div/div/div/img")).click();
-		Common.waitSec(2);
-		driver.findElement(By.xpath(".//button[text()='Book Now']")).click();
-		Common.waitSec(2);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.location='https://mydoctorslive.com/weightloss/weight_loss_mdl/?invite_booking_with_mss=3942bd3b-c33d-4bc5-8ccf-1bade1683168&marketing_group_id=56593e0c-1a2e-4095-ad03-af8afb46d893&medical_speciality=3721951e-a143-46fa-a83e-f1bc27a8ef63';");
+		Common.waitSec(5);
+
 		driver.findElement(By.xpath(".//button[text()='Continue']")).click();
 		Common.waitSec(2);
+
 		driver.findElement(By.xpath(".//button[text()='Next']")).click();
 		Common.waitSec(2);
-		driver.findElement(By.name("data[screening_questionnaire_question_weight]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_height]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_bp]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_bp_1]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_pulse]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_bmi]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_1]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_2]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_3]")).sendKeys("1");
-		driver.findElement(By.name("data[screening_questionnaire_question_4]")).sendKeys("1");
 
-		Common.waitSec(10);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("window.scrollBy(506, 732)", "");
-		//document.querySelector('body .bw-booking-modal .bw-booking-modal-inner .bw-tab-pane .formio-form .wizard-page .form-check span');
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//		WebElement etm1 = driver.findElement(By.xpath("/html/body/div[2]/div[7]/div[1]/div[2]/div/div/div/div[2]/div/div/div/div/div/div/div[13]/div[1]/div[1]/label/span"));
-//		action.moveToElement(etm1).build().perform();
-//		wait.until(ExpectedConditions.elementToBeClickable(etm1));
-//		driver.findElement((By) etm1).click();
-//		etm1.click();
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-		Common.waitSec(2);
-		//check box 1
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
+		driver.findElement(By.name("data[screening_questionnaire_1]")).sendKeys("5.75");
+		driver.findElement(By.name("data[screening_questionnaire_2]")).sendKeys("145");
+		driver.findElement(By.name("data[screening_questionnaire_3]")).sendKeys("1");
+		driver.findElement(By.name("data[screening_questionnaire_4]")).sendKeys("1");
+		driver.findElement(By.name("data[screening_questionnaire_5]")).sendKeys("1");
 
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
 		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		//chcek box 2
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		driver.findElement(By.name("data[screening_questionnaire_question_22_other]")).sendKeys("1");
-		Common.waitSec(2);
-
-		//check box 3
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-
-		//last
-		driver.findElement(By.name("data[screening_questionnaire_question_29_other]")).sendKeys("1");
-		action.sendKeys(Keys.TAB).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.TAB).build().perform();
-		action.sendKeys(Keys.SPACE).build().perform();
-		Common.waitSec(2);
-
 
 		//submit
 		driver.findElement(By.xpath(".//button[text()='Submit']")).click();
 		Common.waitSec(2);
 
+
 		driver.findElement(By.className("bw-checkbox-input")).click();
-		driver.findElement(By.xpath("//*[@id=\"dcrootID\"]/div[7]/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[2]/div[1]/input")).sendKeys("4584401112661786");
 		Common.waitSec(3);
-		driver.findElement(By.xpath("//*[@id=\"dcrootID\"]/div[7]/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/input")).sendKeys("10");
-		driver.findElement(By.xpath("//*[@id=\"dcrootID\"]/div[7]/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/input")).sendKeys("25");
-		driver.findElement(By.xpath("//*[@id=\"dcrootID\"]/div[7]/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[2]/div[2]/div[3]/div/input")).sendKeys("040");
+		//input card
+//		driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div/div[1]/div/div[2]/div[1]/div[2]/div/div[2]/div[2]/div[1]/input")).sendKeys("4584401112661786");
+//		Common.waitSec(3);
+//		action.sendKeys(Keys.TAB).build().perform();
+//		action.sendKeys("10").build().perform();
+//		action.sendKeys(Keys.TAB).build().perform();
+//		action.sendKeys("25").build().perform();
+//		action.sendKeys(Keys.TAB).build().perform();
+//		action.sendKeys("040").build().perform();
+
+		//coupon code
+		driver.findElement(By.xpath("//body/div[5]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/div[4]/div[2]/input[1]")).sendKeys("1MBOYZ");
 		Common.waitSec(2);
-		driver.findElement(By.xpath("//*[@id=\"dcrootID\"]/div[7]/div[1]/div[2]/div[2]/div[2]/button/span")).click();
-		Common.waitSec(3);
+
+		//submit
+		driver.findElement(By.xpath("//body[1]/div[5]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]/span[1]")).click();
+		Common.waitSec(5);
+
+		//select time
 		driver.findElement(By.xpath(".//div[text()='Select time slot']")).click();
 		Common.waitSec(2);
 		action.sendKeys(Keys.ARROW_UP).build().perform();

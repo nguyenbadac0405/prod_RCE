@@ -1,16 +1,15 @@
 package com.frame;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
 import com.Common;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
 import java.time.Duration;
+import java.awt.Robot;
 
 public class new_to_assign {
 	protected static WebDriver driver;
@@ -263,7 +262,8 @@ public class new_to_assign {
 		driver.findElement(By.name("data[compliance_verification_verified_consent]")).click();
 		driver.findElement(By.xpath("//*[@name='data[submit]']")).click();
 		Common.waitSec(2);
-		driver.findElement(By.xpath(".//button[text()='Create new']")).click();
+//		driver.findElement(By.xpath(".//button[text()='Create new']")).click();
+		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(3);
 
 
@@ -565,12 +565,41 @@ public class new_to_assign {
 
 	public void weightloss_to_assign() {
 		//selected provider
-		System.out.println("Select Provider");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions action = new Actions(driver);
 
-		driver.findElement(By.xpath(".//div[text()='No Provider Available']")).click();
+		driver.findElement(By.xpath(".//span[text()='Questionnaire']")).click();
+		Common.waitSec(3);
+
+		driver.findElement(By.name("data[screening_questionnaire_6]")).sendKeys("123");
+		driver.findElement(By.name("data[screening_questionnaire_7]")).sendKeys("34");
+		driver.findElement(By.name("data[screening_questionnaire_8]")).sendKeys("145");
+		driver.findElement(By.name("data[screening_questionnaire_9]")).sendKeys("167");
+		driver.findElement(By.name("data[screening_questionnaire_10]")).sendKeys("178");
 		Common.waitSec(2);
+		driver.findElement(By.name("data[screening_questionnaire_11]")).sendKeys("5.75");
+		driver.findElement(By.name("data[screening_questionnaire_12]")).sendKeys("145");
+		driver.findElement(By.name("data[screening_questionnaire_13]")).sendKeys("1");
+		driver.findElement(By.name("data[screening_questionnaire_20]")).sendKeys("1");
+
+		Common.waitSec(3);
+		driver.findElement(By.name("data[submit]")).click();
+
+		Common.waitSec(5);
+		System.out.println("Select Provider");
+		Common.waitSec(30);
+
+//		WebElement assign = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[3]/div/div/div/div[9]/div/div/div/div[1]/div[1]"));
+//		action.moveToElement(assign).build().perform();
+//		js.executeScript("document.getElementById('react-select-82-input').click();");
+
+		driver.findElement(By.xpath("//input[@id='react-select-82-input']")).click();
+		Common.waitSec(3);
+
+		Common.waitSec(2);
+//		assign.sendKeys("dac");
 		action.sendKeys("dac").build().perform();
+//		js.executeScript("document.getElementById('react-select-82-input').setAttribute('value','dac');");
 		Common.waitSec(3);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Common.waitSec(2);

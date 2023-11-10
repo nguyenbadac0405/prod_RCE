@@ -1025,6 +1025,21 @@ public class assign_to_approved {
         driver.findElement(By.name("data[submit]")).click();
         Common.waitSec(3);
 
+        //qs
+        driver.findElement(By.xpath(".//span[text()='Questionnaire']")).click();
+        Common.waitSec(3);
+        driver.findElement(By.name("data[screening_questionnaire_14]")).sendKeys("123");
+        driver.findElement(By.name("data[screening_questionnaire_15]")).sendKeys("34");
+        driver.findElement(By.name("data[screening_questionnaire_16]")).sendKeys("145");
+        driver.findElement(By.name("data[screening_questionnaire_17]")).sendKeys("167");
+        driver.findElement(By.name("data[screening_questionnaire_19]")).sendKeys("178");
+        Common.waitSec(2);
+        driver.findElement(By.name("data[screening_questionnaire_18]")).sendKeys("5.75");
+        driver.findElement(By.name("data[screening_questionnaire_21]")).sendKeys("145");
+        driver.findElement(By.name("data[screening_questionnaire_question_17_content2]")).sendKeys("1");
+
+        driver.findElement(By.name("data[submit]")).click();
+        Common.waitSec(3);
 
         // approved
         driver.findElement(By.xpath("//*[@id='patient-dashboard']/div[5]/div[2]/div[1]/div[3]/div[1]/div[3]/button")).click();

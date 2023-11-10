@@ -2,6 +2,7 @@ package com.scripts;
 
 import com.frame.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -200,22 +201,14 @@ public class MDL_patient extends DriverFactory {
 	void weightloss() throws Exception {
 		excel.setExcelFile("src/test/resources/MDL.xlsx", "Sheet1");
 
-		login.URL_ADMIN();
-		Common.waitSec(3);
-		login.admin();
-		Common.waitSec(3);
-
-		login.change_price();
-		Common.waitSec(3);
-
-		login.change_link_to_MDL();
+		login.URL_MDL();
 		Common.waitSec(10);
 
 		Common.waitSec(3);
 		login.MDL_patient();
 		Common.waitSec(15);
 		new_case_patient.weightloss();
-		Common.waitSec(60);
+		Common.waitSec(120);
 		String id = new_case_patient.weightloss_ID().substring(9);
 		System.out.println(id);
 
@@ -264,10 +257,6 @@ public class MDL_patient extends DriverFactory {
 		to_complete.complete_case();
 		Common.waitSec(3);
 
-		login.change_link_to_admin();
-		Common.waitSec(5);
-		login.back_price();
-		Common.waitSec(5);
 	}
 	@Test
 	public void weightloss_new_case() throws Exception {
@@ -319,11 +308,40 @@ public class MDL_patient extends DriverFactory {
 
 	@Test
 	public void changeprice() throws Exception {
-		login.URL_MDL();
-		login.MDL_patient();
-		Common.waitSec(30);
-		String id = new_case_patient.MDL_ID();
-		System.out.println(id);
+		login.URL_ADMIN();
+		Common.waitSec(3);
+		login.admin();
+		Common.waitSec(3);
 
+		login.change_price();
+		Common.waitSec(3);
+
+	}
+
+	@Test
+	public void backprice() throws Exception {
+		login.URL_ADMIN();
+		Common.waitSec(3);
+		login.admin();
+		Common.waitSec(3);
+
+		login.back_price();
+		Common.waitSec(3);
+
+	}
+
+	@Test
+	public void check_ID() throws Exception {
+		login.URL_MDL();
+		Common.waitSec(3);
+
+		login.MDL_patient();
+		Common.waitSec(60);
+		WebElement ID = driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div/div/ul/li[1]"));
+
+		String case_ID = ID.getText();
+		String id = case_ID.substring(9);
+		System.out.println(id);
+		Common.waitSec(3);
 	}
 }
